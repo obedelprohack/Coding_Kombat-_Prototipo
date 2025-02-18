@@ -30,7 +30,7 @@ Los sprites utilizados en esta versión provienen de páginas de recursos gratui
 
 Actualmente, el juego funciona en una red local a través de un servidor separado. La idea inicial era diseñarlo para escuelas, donde los jugadores podrían elegir a su oponente dentro de la misma red.
 
-Sin embargo, quiero expandirlo a un **modo multijugador en línea**, lo cual es un desafío mayor y requiere más trabajo. 
+Sin embargo, quiero expandirlo a un **modo multijugador en línea**, lo cual es un desafío mayor y requiere más trabajo.
 
 ## Futuro del Proyecto
 
@@ -40,4 +40,3 @@ Aunque el prototipo puede parecer simple, tengo muchas ideas para hacerlo más i
 - **Diseño de arte y sprites**
 - **Implementación de una conexión multijugador robusta**
 - **Mejoras en la jugabilidad y balanceo**
-- **y agregar muchas ideas que tengo**
