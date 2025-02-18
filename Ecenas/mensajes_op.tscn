@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://i4le4t04lfeq"]
+
+[node name="Mensajes_op" type="Label"]
+offset_right = 768.0
+offset_bottom = 448.0
+horizontal_alignment = 1
+vertical_alignment = 1

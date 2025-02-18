@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1u4ylw7o3167"]
+
+[ext_resource type="Texture2D" uid="uid://djirdi2iol2bu" path="res://SpritesF_C/VIDA/25.png" id="1_jw8r4"]
+[ext_resource type="Script" path="res://Scripts/vidaoponente.gd" id="2_yn3y3"]
+
+[node name="Vidaoponente" type="Sprite2D"]
+position = Vector2(96, 80)
+scale = Vector2(6, 5)
+texture = ExtResource("1_jw8r4")
+script = ExtResource("2_yn3y3")

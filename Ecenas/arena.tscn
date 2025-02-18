@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjk5a4k371jth"]
+
+[ext_resource type="Script" path="res://Scripts/arena.gd" id="1_f6kie"]
+[ext_resource type="FontFile" uid="uid://c4u2crmr1q1s6" path="res://SpritesF_C/Consola.ttf" id="1_ypo57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n65qm"]
+size = Vector2(64, 1086.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2la2s"]
+size = Vector2(64, 1088.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlj13"]
+size = Vector2(1960, 64)
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_f6kie")
+
+[node name="Camara" type="Camera2D" parent="."]
+position = Vector2(960, 544)
+
+[node name="Consola_MJ" type="TextEdit" parent="."]
+offset_left = 1536.0
+offset_top = 48.0
+offset_right = 1920.0
+offset_bottom = 1088.0
+theme_override_colors/background_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 1, 0, 1)
+theme_override_colors/caret_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ypo57")
+theme_override_font_sizes/font_size = 15
+
+[node name="Ejecutar_MJ" type="Button" parent="."]
+offset_left = 1536.0
+offset_right = 1920.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_ypo57")
+theme_override_font_sizes/font_size = 30
+text = "Ejecutar(F6)"
+
+[node name="Consola_OP" type="TextEdit" parent="."]
+offset_left = -424.0
+offset_top = 48.0
+offset_right = -40.0
+offset_bottom = 1088.0
+theme_override_fonts/font = ExtResource("1_ypo57")
+theme_override_font_sizes/font_size = 15
+
+[node name="Ejecutar_OP" type="Button" parent="."]
+offset_left = -424.0
+offset_right = -40.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_ypo57")
+theme_override_font_sizes/font_size = 30
+text = "Ejecutar"
+
+[node name="Cosas" type="StaticBody2D" parent="."]
+
+[node name="pared" type="CollisionShape2D" parent="Cosas"]
+position = Vector2(-8, 544.75)
+shape = SubResource("RectangleShape2D_n65qm")
+
+[node name="pared0" type="CollisionShape2D" parent="Cosas"]
+position = Vector2(1568, 543.875)
+shape = SubResource("RectangleShape2D_2la2s")
+
+[node name="suelo" type="CollisionShape2D" parent="Cosas"]
+position = Vector2(940, 1056)
+shape = SubResource("RectangleShape2D_nlj13")
+
+[node name="Salida" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 688.0
+offset_top = 8.0
+offset_right = 848.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_ypo57")
+text = "Salida(F1)"
+
+[node name="Salidaa" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 576.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 608.0
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_ypo57")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Time" type="Label" parent="."]
+offset_left = 640.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("1_ypo57")
+theme_override_font_sizes/font_size = 50
+text = "0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Ejecutar_MJ" to="." method="_on_ejecutar_mj_pressed"]
+[connection signal="pressed" from="Ejecutar_OP" to="." method="_on_ejecutar_op_pressed"]
+[connection signal="pressed" from="Salida" to="." method="_on_cambio_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

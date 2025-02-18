@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx6ub1ctp3ffl"]
+
+[ext_resource type="Script" path="res://Scripts/jugadores.gd" id="1_0wrcd"]
+[ext_resource type="FontFile" uid="uid://c4u2crmr1q1s6" path="res://SpritesF_C/Consola.ttf" id="1_8rd82"]
+
+[node name="jugadores" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0wrcd")
+
+[node name="PlayerList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -896.0
+offset_top = -476.0
+offset_right = 896.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("1_8rd82")
+theme_override_font_sizes/font_size = 25
+text = "Menu"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -120.0
+offset_right = 192.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_8rd82")
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "Play"
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_8rd82")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="item_selected" from="PlayerList" to="." method="_on_player_list_item_selected"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://djnhxt3nsoqpu"]
+
+[ext_resource type="Texture2D" uid="uid://djirdi2iol2bu" path="res://SpritesF_C/VIDA/25.png" id="1_xn3p1"]
+[ext_resource type="Script" path="res://Scripts/vidamijugador.gd" id="2_e7s1b"]
+
+[node name="Vidamijugador" type="Sprite2D"]
+position = Vector2(96, 80)
+scale = Vector2(6, 5)
+texture = ExtResource("1_xn3p1")
+flip_h = true
+script = ExtResource("2_e7s1b")

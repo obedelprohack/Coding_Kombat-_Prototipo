@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv3na5yh1l15y"]
+
+[ext_resource type="FontFile" uid="uid://c4u2crmr1q1s6" path="res://SpritesF_C/Consola.ttf" id="1_4rus1"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_5dpy1"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5dpy1")
+
+[node name="F_C" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -744.0
+offset_top = -476.0
+offset_right = 744.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4rus1")
+theme_override_font_sizes/font_size = 150
+text = "CODE_COMBAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="As_ip" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 228.0
+offset_right = 337.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4rus1")
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "IP del servidor"
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 384.0
+offset_right = 1152.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("1_4rus1")
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Jugar"
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 464.0
+offset_right = 1152.0
+offset_bottom = 528.0
+theme_override_fonts/font = ExtResource("1_4rus1")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="Ip" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 688.0
+offset_right = 1216.0
+offset_bottom = 752.0
+theme_override_fonts/font = ExtResource("1_4rus1")
+theme_override_font_sizes/font_size = 40
+text = "192.168.1.107"
+alignment = 1
+
+[connection signal="pressed" from="As_ip" to="." method="_on_as_ip_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="text_changed" from="Ip" to="." method="_on_ip_text_changed"]

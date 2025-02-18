@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqks74bipav1h"]
+
+[ext_resource type="Texture2D" uid="uid://dmm5fwrgue4fn" path="res://SpritesF_C/ENERGIA/25.png" id="1_g2hld"]
+[ext_resource type="Script" path="res://Scripts/energiaoponente.gd" id="2_qo7aw"]
+
+[node name="Energiaoponente" type="Sprite2D"]
+position = Vector2(96, 16)
+scale = Vector2(6, 5)
+texture = ExtResource("1_g2hld")
+script = ExtResource("2_qo7aw")
