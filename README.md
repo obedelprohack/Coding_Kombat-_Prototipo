@@ -1,6 +1,6 @@
 # Coding_Kombat - Prototipo
 
-**prototipo** de *Coding_Kombat*. Este es el código fuente en su estado inicial, funcional hasta cierto punto. Actualmente, solo las habilidades pueden ejecutarse correctamente. Algunos ejemplos de habilidades disponibles:
+**prototipo** de *Coding_Kombat*. Este es el código fuente en su estado inicial, funcional hasta cierto punto, solo las habilidades pueden ejecutarse correctamente. Algunos ejemplos de habilidades disponibles:
 
 - `Jump(parametro)`
 - `WalkLeft(parametro)`
