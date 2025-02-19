@@ -24,7 +24,7 @@ Esto fue posible después de investigar cómo funciona un compilador de pseudoc�
 
 ## Sprites y Estilo Visual
 
-Los sprites utilizados en esta versión provienen de páginas de recursos gratuitos, aunque algunos no lo son. Aún estoy definiendo un estilo visual consistente y agradecería ayuda en este aspecto.
+Los sprites utilizados en esta versión provienen de páginas de recursos gratuitos, Aún estoy definiendo un estilo visual consistente y agradecería ayuda en este aspecto.
 
 ## Conexión Multijugador
 
